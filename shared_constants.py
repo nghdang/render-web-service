@@ -1,0 +1,45 @@
+# -*- coding: utf-8 -*-
+
+from __future__ import absolute_import
+
+IS_LOCAL_HOST = False
+if IS_LOCAL_HOST:
+    SETTING_JSON_NAME = "settings_localhost.json"
+    WATING_DATABASE_NAME = "waiting"
+else:
+    SETTING_JSON_NAME = "settings_server.json"
+    WATING_DATABASE_NAME = "waiting_slightsold"
+
+REGISTRATIONS_TABLE_NAME = "tb_registrations"
+STORE_SETTINGS_TABLE_NAME = "tb_store_settings"
+
+
+INITIAL_WAITING_ORDER = 1
+INITIAL_WAITING_TIME_PER_TEAM = 10
+
+class RegStatus:
+    UNDEFINED = -1
+    REGISTERED = 0
+    ENTERED = 1
+    CANCELLED = 2
+    NOT_ENTERED = 3
+
+
+class RegsTableHeader:
+    REGISTRATION_ID = "REGISTRATION_ID"
+    STORE_ID = "STORE_ID"
+    WAITING_ORDER = "WAITING_ORDER"
+    PHONE_NUMBER = "PHONE_NUMBER"
+    TEAM_SIZE = "TEAM_SIZE"
+    TIMESTAMP = "TIMESTAMP"
+    STATUS = "STATUS"
+
+class StoreSettingsTableHeader:
+    STORE_ID = "STORE_ID"
+    WAITING_MINUTES_PER_TEAM = "WAITING_MINUTES_PER_TEAM"
+
+TOTAL_REGISTRATIONS = "TOTAL_REGISTRATIONS"
+TOTAL_WAITING_MINUTES = "TOTAL_WAITING_MINUTES"
+WAITING_MINUTES_PER_TEAM = "WAITING_MINUTES_PER_TEAM"
+
+TIMESTAMP_FORMAT = "%Y-%m-%d %H:%M:%S.%f"

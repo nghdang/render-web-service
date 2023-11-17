@@ -1,0 +1,36 @@
+{
+    "DATABASE_SERVER": {
+        "HOST": "localhost",
+        "PORT": 3306,
+        "USERNAME": "root",
+        "PASSWORD": "root"
+    },
+    "DATABASES": [
+        {
+            "NAME": "waiting",
+            "TABLES": [
+                {
+                    "NAME": "tb_registrations",
+                    "HEADERS": {
+                        "REGISTRATION_ID": "INTEGER",
+                        "STORE_ID": "INTEGER",
+                        "WAITING_ORDER": "INTEGER",
+                        "PHONE_NUMBER": "TEXT",
+                        "TEAM_SIZE": "INTEGER",
+                        "TIMESTAMP": "TEXT",
+                        "STATUS": "INTEGER"
+                    },
+                    "PRIMARY_KEY": "REGISTRATION_ID"
+                },
+                {
+                    "NAME": "tb_store_settings",
+                    "HEADERS": {
+                        "STORE_ID": "INTEGER",
+                        "WAITING_MINUTES_PER_TEAM": "INTEGER"
+                    },
+                    "PRIMARY_KEY": "STORE_ID"
+                }
+            ]
+        }
+    ]
+}
